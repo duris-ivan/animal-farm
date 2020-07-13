@@ -3,13 +3,10 @@ package com.heritInternational;
 import java.util.Date;
 import java.util.List;
 
-import com.heritInternational.animal.Animal;
 import com.heritInternational.animal.Chicken;
 import com.heritInternational.animal.Dog;
 import com.heritInternational.animal.Duck;
-import com.heritInternational.animal.Fightable;
 import com.heritInternational.animal.Flyable;
-import com.heritInternational.animal.Guardable;
 import com.heritInternational.animal.Horse;
 import com.heritInternational.animal.Kopytnik;
 import com.heritInternational.animal.Moveable;
@@ -38,18 +35,18 @@ public class Application {
             new Profit("Eggs",5 )
         );
 
-        AnimalBody chickenBodyFemale = new AnimalBody(Beak.yes, Wings.Long, Sex.FEMALE, (byte) 2, (byte) 3, Voice.kotkotkodaaak);
-        AnimalBody chickenBodyMale = new AnimalBody(Beak.yes,Wings.Short,Sex.MALE, (byte) 2, (byte) 3,Voice.kikiriki);
+        AnimalBody chickenBodyFemale = new AnimalBody(Beak.yes, Wings.Long, Sex.FEMALE, (byte) 2, (byte) 3, Voice.KOTKOTKODAAAK);
+        AnimalBody chickenBodyMale = new AnimalBody(Beak.yes,Wings.Short,Sex.MALE, (byte) 2, (byte) 3,Voice.KIKIRIKI);
 
         AnimalBody dogBodyFemale = new AnimalBody(Lip.yes,Sex.FEMALE,(byte) 4, (byte)4,Voice.VUFF,(short) 30);
         AnimalBody dogBodyMale = new AnimalBody(Lip.yes,Sex.MALE,(byte) 4, (byte)4,Voice.VUFF, (short) 45);
 
 
         AnimalHierarchy chickenHierarchy = new AnimalHierarchy(
-            "Gallus gallus domesticus", Phylum.Chordata,"Phasianidae"
+            "Gallus gallus domesticus", Phylum.CHORDATA,"Phasianidae"
         );
         AnimalHierarchy dogHierarchy = new AnimalHierarchy(
-            "DogusNameLatinus", Phylum.Chordata,"DogusFamily"
+            "DogusNameLatinus", Phylum.CHORDATA,"DogusFamily"
         );
 
         /*Animal[] animals = {
