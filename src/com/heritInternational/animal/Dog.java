@@ -33,7 +33,7 @@ public class Dog extends Animal implements Guardable {
 
     @Override
     public void guard() {
-        System.out.println("Dog can guard your house and your wealth");
+        System.out.println("Dog can guard your house and your wealth and CHILDREN");
     }
 
     @Override
