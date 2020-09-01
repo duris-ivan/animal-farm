@@ -9,7 +9,7 @@ import com.heritInternational.Profit;
 import com.heritInternational.model.Sex;
 import com.heritInternational.model.StatusEating;
 
-public class Duck extends Animal implements Flyable, Moveable {
+public class Duck extends Animal implements Flyable, Moveable, Soundable {
     private AnimalBody animalBody;
     private short countOfChildren;
 
@@ -50,7 +50,17 @@ public class Duck extends Animal implements Flyable, Moveable {
     }
 
     @Override
+    public void letiet() {
+        System.out.println("Duck can letiet");
+    }
+
+    @Override
     public void move() {
         System.out.println("Duck can move");
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("---Duck's voice:--- KacKacKac");
     }
 }

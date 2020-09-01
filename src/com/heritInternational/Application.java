@@ -2,14 +2,9 @@ package com.heritInternational;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
-import com.heritInternational.animal.Chicken;
-import com.heritInternational.animal.Dog;
-import com.heritInternational.animal.Duck;
-import com.heritInternational.animal.Flyable;
-import com.heritInternational.animal.Horse;
-import com.heritInternational.animal.Kopytnik;
-import com.heritInternational.animal.Moveable;
+import com.heritInternational.animal.*;
 import com.heritInternational.model.Beak;
 import com.heritInternational.model.Lip;
 import com.heritInternational.model.Phylum;
@@ -58,19 +53,28 @@ public class Application {
         List<Chicken> chickens = List.of(
             new Chicken("Kristian Kohút",chickenHierarchy,new Date(),StatusEating.isEatable,chickenBodyMale,chickenProfit),
             new Chicken("Beta Kotkot s deťmi",chickenHierarchy,new Date(),StatusEating.isEatable,chickenBodyFemale, (short) 30, chickenProfit)
+
         );
 
         Dog dogNeraSom = new Dog("Nera Somorcikova", dogHierarchy,new Date(), StatusEating.isNotEatable,dogBodyFemale,(short) 0,dogProfit);
         Chicken chicken = new Chicken("Beta Kotkot s deťmi",chickenHierarchy,new Date(),StatusEating.isEatable,chickenBodyFemale, (short) 30, chickenProfit);
 
         Flyable falco = chicken;
-        falco.fly();
+        //falco.fly();
+        Moveable falco2 = chicken;
+        //falco2.move();
+        Chicken falco3 = chicken;
 
         Moveable moveableFalco = chicken;
-        moveableFalco.move();
-        falco.fly();
-        chicken.theBiggestAdvantage();
-        chicken.fly();
+        //moveableFalco.move();
+        //falco.fly();
+        //chicken.theBiggestAdvantage();
+        //chicken.fly();
+
+        Flyable falco_4= chicken;
+        //falco_4.letiet();
+        Moveable falco_5= chicken;
+        //falco_5.move();
 
 
         Horse horse1 = new Horse(null, null, null, null, null, null);
@@ -78,11 +82,41 @@ public class Application {
 
         Dog dog = new Dog(null, null, null, null, null, (byte) 0, List.of());
 
-        Duck duck = new Duck("Kacka",chickenHierarchy,new Date(),StatusEating.isEatable,chickenBodyFemale, (short) 30, chickenProfit);
+        Duck duck28 = new Duck("Kacka",chickenHierarchy,new Date(),StatusEating.isEatable,chickenBodyFemale, (short) 30, chickenProfit);
 
-        canFly(duck);
+        //canFly(duck28);
 
-        new AnimalFarm(chickens, dogNeraSom).doSomethingWithAnimals();
+        //new AnimalFarm(chickens, dogNeraSom, duck28).doSomethingWithAnimals();
+        Scanner sc = new Scanner(System.in);
+
+        while (true){
+            System.out.println("Enter the animal whom sound you wanna hear.../chicken / dog / duck / horse /");
+            String animal_choice = sc.nextLine().toLowerCase();
+
+
+
+
+            switch(animal_choice){
+                case "chicken":
+                    chicken.makeSound();
+                    break;
+                case "dog":
+                    dog.makeSound();
+                    break;
+                case "duck":
+                    duck28.makeSound();
+                    break;
+                case "horse":
+                    horse1.makeSound();
+                    break;
+                default:
+                    System.out.println("animal not recognised");
+                    break;
+            }
+        }
+
+
+
     }
 
     private static void canFly(Flyable flyable) {

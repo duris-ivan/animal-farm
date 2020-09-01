@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.heritInternational.animal.Animal;
-import com.heritInternational.animal.Chicken;
-import com.heritInternational.animal.Dog;
-import com.heritInternational.animal.Flyable;
+import com.heritInternational.animal.*;
 
 public class AnimalFarm {
     private List<Chicken> chickens;
     private Dog dog;
+    private Duck duck;
 
-    public AnimalFarm(List<Chicken> chickens, Dog dog) {
+    public AnimalFarm(List<Chicken> chickens, Dog dog, Duck duck) {
         this.chickens = chickens;
         this.dog = dog;
+        this.duck=duck;
     }
 
     public void doSomethingWithAnimals() {
 
         List<Animal> animals = new ArrayList<>(chickens);
         animals.add(dog);
+        animals.add(duck);
 
         for (Animal animal : animals){
             System.out.println(animal.toString());

@@ -9,7 +9,7 @@ import com.heritInternational.Profit;
 import com.heritInternational.model.Sex;
 import com.heritInternational.model.StatusEating;
 
-public class Chicken extends Animal implements Flyable, Moveable {
+public class Chicken extends Animal implements Flyable, Moveable, Soundable {
     private AnimalBody animalBody;
     private short countOfChildren;
 
@@ -23,6 +23,8 @@ public class Chicken extends Animal implements Flyable, Moveable {
         this.animalBody = animalBody;
         this.countOfChildren = countOfChildren;
     }
+
+
 
     @Override
     public void theBiggestAdvantage() {
@@ -50,7 +52,15 @@ public class Chicken extends Animal implements Flyable, Moveable {
     }
 
     @Override
-    public void move() {
-        System.out.println("Chicken can fly?");
+    public void letiet() {
+        System.out.println("chicken can letiet");
     }
+
+    @Override
+    public void move() {
+        System.out.println("Chicken can move");
+    }
+
+    @Override
+    public void makeSound() {System.out.println("---Chicken Voice:--- Kikiriki"); }
 }

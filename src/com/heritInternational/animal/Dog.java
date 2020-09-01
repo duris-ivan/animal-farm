@@ -9,7 +9,7 @@ import com.heritInternational.Profit;
 import com.heritInternational.model.Sex;
 import com.heritInternational.model.StatusEating;
 
-public class Dog extends Animal implements Guardable {
+public class Dog extends Animal implements Guardable, Soundable {
     private AnimalBody animalBody;
     private short countOfChildren;
 
@@ -53,5 +53,10 @@ public class Dog extends Animal implements Guardable {
     @Override
     public void fight() {
         System.out.println("Dog can guard your house");
+    }
+
+    @Override
+    public void makeSound(){
+        System.out.println("---Dog's Voice:--- HafHaf-Vooof");
     }
 }

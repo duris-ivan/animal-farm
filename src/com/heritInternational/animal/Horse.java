@@ -9,7 +9,7 @@ import com.heritInternational.Profit;
 import com.heritInternational.model.Sex;
 import com.heritInternational.model.StatusEating;
 
-public class Horse extends Kopytnik {
+public class Horse extends Kopytnik implements Soundable{
     private AnimalBody animalBody;
     private short countOfChildren;
     private List<Profit> chickenProfit;
@@ -47,4 +47,8 @@ public class Horse extends Kopytnik {
             '}';
     }
 
+    @Override
+    public void makeSound() {
+        System.out.println("---Horse's Voice:--- Pffffrrrrr !!!");
+    }
 }
